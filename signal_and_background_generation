@@ -1,0 +1,20 @@
+For mono-Z signature, we need 2HDM+a psuedoscalar model which could be download using the likn below
+https://github.com/LHC-DMWG/model-repository/tree/DMSimp_t/models
+Save the mdoel's directory in heptools/models
+For signal generation, we import the 2HDM+a psuedoscalar model by using the following command in Madgraph:
+>>import model Pseudoscalar_2HDM
+For signal generation(g-g fusion):
+>>generate g g > l+ l- xd xd~ /h1[QCD=noborn]
+where, [QCD=noborn] means that you claim that the process does not have any tree-level amplitude. 
+Which allows to use loop-induced mode (note that we do not check if a tree-level exists and result are likely non physical if a tree level amplitude 
+does exists).
+For backgrounds, we are using Standard model.we are considering WW, ZZ, tt~ and Z+jets.
+for tt~
+>>generate p p > t t~, (t > w+ b, w+ > l+ vl), (t~ > w- b~, w- > l- vl~)
+for WW
+>>generate p p > w+ w-, w+ > l+ vl, w- > l- vl~
+for ZZ
+>>generate p p > z z, z > l+ l-, z > vl vl~
+for z+jets(here we are consider two jets where j=b b~)
+>>generate p p > z j j , z > l+ l-(for cases like delta_R or delta_phi)
+>>generate p p > z j j , z > vl vl~(for plotting variables that require missing energy or momentum)
