@@ -1,6 +1,6 @@
-For mono-Z signature, we need 2HDM+a psuedoscalar model which could be download using the likn below
+For mono-Z signature, we need 2HDM+a psuedoscalar model which could be download using the link below
 https://github.com/LHC-DMWG/model-repository/tree/DMSimp_t/models
-Save the mdoel's directory in heptools/models
+Save the model's directory in heptools/models
 For signal generation, we import the 2HDM+a psuedoscalar model by using the following command in Madgraph:
 >>import model Pseudoscalar_2HDM
 For signal generation(g-g fusion):
@@ -18,3 +18,4 @@ for ZZ
 for z+jets(here we are consider two jets where j=b b~)
 >>generate p p > z j j , z > l+ l-(for cases like delta_R or delta_phi)
 >>generate p p > z j j , z > vl vl~(for plotting variables that require missing energy or momentum)
+where one could add W+jets and WZ backgrounds but they are not strong backrounds. 
