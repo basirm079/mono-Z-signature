@@ -1,4 +1,4 @@
-For mono-Z signature, we need 2HDM+a psuedoscalar model which could be download using the link below
+For mono-Z signature, we need 2HDM+a psuedoscalar model which could be downloaded using the link below
 https://github.com/LHC-DMWG/model-repository/tree/DMSimp_t/models
 Save the model's directory in heptools/models
 For signal generation, we import the 2HDM+a psuedoscalar model by using the following command in Madgraph:
