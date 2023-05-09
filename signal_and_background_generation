@@ -4,10 +4,17 @@ Save the model's directory in heptools/models
 For signal generation, we import the 2HDM+a psuedoscalar model by using the following command in Madgraph:
 >>import model Pseudoscalar_2HDM
 For signal generation(g-g fusion):
->>generate g g > l+ l- xd xd~ /h1[QCD=noborn]
+>>generate g g > l+ l- xd xd~ /h1[noborn=QCD]
 where, [QCD=noborn] means that you claim that the process does not have any tree-level amplitude. 
-Which allows to use loop-induced mode (note that we do not check if a tree-level exists and result are likely non physical if a tree level amplitude 
+Which allows to use loop-induced mode (note that we do not check if a tree-level exists and result are likely non 
+physical if a tree level amplitude 
 does exists).
+In the parameter card for signal:
+All the parameters are set as per our requirements.
+In the "information for decay" block, all the particles are set to Auto except the SM-higgs(h1) is set to be 0.00407.
+In the run card:
+The lhapdf code is set to 263000 for our case and in the store "info for systematic studies" block, the "True" is 
+replaced with "False".
 For backgrounds, we are using Standard model.we are considering WW, ZZ, tt~ and Z+jets.
 for tt~
 >>generate p p > t t~, (t > w+ b, w+ > l+ vl), (t~ > w- b~, w- > l- vl~)
