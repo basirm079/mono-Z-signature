@@ -62,7 +62,7 @@ int main(int argc, char **argv) {
   TH1F* hphi_l_l_ptmiss = new TH1F("phi_l_l_ptmissing","l_l_ptmissing phi",100,0,5);//phi-eta separation of lepton pair and missing energy
   TTree *bgtree5 = new TTree("bgtree5","bdt");
   double etmiss=0,del_phi=0,del_R=0,pt_ll=0,Ht=0,new_all=0,in_mass=0,lead_l=0,sublead_l=0,elead_l=0,esublead_l=0,l_l_ptmiss=0,MT;
-  bgtree5->Branch("MT",&MT,"MT/D");
+  bgtree5->Branch("MT",&MT,"MT/D"); // info stored in trees for BDT
   bgtree5->Branch("etmiss",&etmiss,"etmiss/D");
   bgtree5->Branch("del_phi",&del_phi,"del_phi/D");
   bgtree5->Branch("del_R",&del_R,"del_R/D");
@@ -78,13 +78,7 @@ int main(int argc, char **argv) {
   
 
   int nlept=0, nsemi=0, nhadr=0,z=0;
-  float cut;
-  //cout<<"cut"<<endl;
-  //cin>>cut;
-  //double lum=135.102823;
-  //cout<<"lum"<<endl;
-  //cin>>lum;
-  //float cut;
+  float cut;   //for cut optimization
   //cout<<"cut"<<endl;
   //cin>>cut;
   ifstream ff(lhefname.c_str(),ios::in); //ouverture du fichier .lhe
